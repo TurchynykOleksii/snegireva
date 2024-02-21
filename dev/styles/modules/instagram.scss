@@ -9,21 +9,58 @@
   background-repeat: no-repeat;
   background-color: $lightTextColor;
 
+  @include minw($mob-custom) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @include minw($lg-custom) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
   &__title {
     margin-bottom: 20px;
+    font-family: Alice, sans-serif;
     font-size: 20px;
     text-align: center;
     text-transform: uppercase;
+
+    @include minw($mob-custom) {
+      margin-bottom: 60px;
+      font-size: 35px;
+    }
   }
 
   &__qr {
     margin-bottom: 20px;
     display: flex;
     gap: 16px;
+
+    @include minw($mob-custom) {
+      flex-shrink: 0;
+      align-items: center;
+    }
+
+    img {
+      width: 125px;
+
+      @include minw($mob-custom) {
+        width: 253px;
+      }
+    }
   }
 
   &__text {
     font-size: 14px;
+
+    @include minw($mob-custom) {
+      font-size: 18px;
+    }
+
+    @include minw($lg-custom) {
+      max-width: 308px;
+    }
   }
 
   &__list {
@@ -32,9 +69,27 @@
     flex-wrap: wrap;
     gap: 10px;
     list-style-type: none;
+
+    @include minw($lg-custom) {
+      gap: 28px;
+    }
+  }
+
+  &__wrapper {
+    @include minw($lg-custom) {
+      display: flex;
+    }
   }
 
   &__item {
     max-width: 95px;
+
+    @include minw($mob-custom) {
+      max-width: 189px;
+    }
+
+    @include minw($lg-custom) {
+      max-width: 180px;
+    }
   }
 }

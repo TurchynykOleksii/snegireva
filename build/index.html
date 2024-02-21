@@ -347,69 +347,74 @@
       <h6 class="form__title">Свяжитесь со мной</h6>
     </div>
     <div class="form__text-form">
-      <div class="form__text-wrapper">
-        <div class="wrapper">
-          <p class="form__text">
-            Если у вас есть вопросы, желание запланировать консультацию или записать на процедуру, пожалуйста, заполните
-            эту
-            форму.
-            Я отвечу вам как можно скорее.
-          </p>
-        </div>
-      </div>
-      <div class="form__form-wrapper">
-        <div class="wrapper">
-          <from class="form__request">
-            <label class="form__label">
-              <span>Имя</span>
-              <input type="text" name="username">
-            </label>
-            <label class="form__label">
-              <span>Телефон</span>
-              <input type="text" name="userphone">
-            </label>
-            <label class="form__label form__last-label">
-              <span>Сообщение</span>
-              <input type="text" name="usertext">
-            </label>
-            <input type="submit" value="Отправить" class="btn form__submit">
-          </from>
+      <div class="wrapper">
+        <div class="form__text-frm">
+          <div class="form__text-wrapper">
+            <p class="form__text">
+              Если у вас есть вопросы, желание запланировать консультацию или записать на процедуру, пожалуйста,
+              заполните
+              эту
+              форму.
+              Я отвечу вам как можно скорее.
+            </p>
+          </div>
+          <div class="form__form-wrapper">
+            <form class="form__request">
+              <label class="form__label">
+                <span>Имя</span>
+                <input type="text" name="username">
+              </label>
+              <label class="form__label">
+                <span>Телефон</span>
+                <input type="text" name="userphone">
+              </label>
+              <label class="form__label form__last-label">
+                <span>Сообщение</span>
+                <input type="text" name="usertext">
+              </label>
+              <input type="submit" value="Отправить" class="btn form__submit">
+            </form>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
 </section>
 <section class="instagram">
   <div class="wrapper">
     <div class="instagram__inner">
       <h6 class="instagram__title">Мой instagram</h6>
-      <div class="instagram__qr">
-        <img loading="lazy" src="../img/icons/qr-code.svg" width="125" alt="qr код">
-        <p class="instagram__text">
-          Больше полезной информации о косметической продукции и уходе за кожей ищите Вы можете найти на моей странице в
-          instagram. Подписывайтесь!
-        </p>
+      <div class="instagram__wrapper">
+        <div class="instagram__qr">
+          <img loading="lazy" src="../img/icons/qr-code.svg" alt="qr код">
+          <p class="instagram__text">
+            Больше полезной информации о косметической продукции и уходе за кожей ищите Вы можете найти на моей странице
+            в
+            instagram. Подписывайтесь!
+          </p>
+        </div>
+        <ul class="instagram__list">
+          <li class="instagram__item">
+            <img loading="lazy" src="../img/general/inst1.jpg" alt="Фото работы с инстаграмма">
+          </li>
+          <li class="instagram__item">
+            <img loading="lazy" src="../img/general/inst2.jpg" alt="Фото работы с инстаграмма">
+          </li>
+          <li class="instagram__item">
+            <img loading="lazy" src="../img/general/inst3.jpg" alt="Фото работы с инстаграмма">
+          </li>
+          <li class="instagram__item">
+            <img loading="lazy" src="../img/general/inst4.jpg" alt="Фото работы с инстаграмма">
+          </li>
+          <li class="instagram__item">
+            <img loading="lazy" src="../img/general/inst5.jpg" alt="Фото работы с инстаграмма">
+          </li>
+          <li class="instagram__item">
+            <img loading="lazy" src="../img/general/inst6.jpg" alt="Фото работы с инстаграмма">
+          </li>
+        </ul>
       </div>
-      <ul class="instagram__list">
-        <li class="instagram__item">
-          <img loading="lazy" src="../img/general/inst1.jpg" alt="Фото работы с инстаграмма">
-        </li>
-        <li class="instagram__item">
-          <img loading="lazy" src="../img/general/inst2.jpg" alt="Фото работы с инстаграмма">
-        </li>
-        <li class="instagram__item">
-          <img loading="lazy" src="../img/general/inst3.jpg" alt="Фото работы с инстаграмма">
-        </li>
-        <li class="instagram__item">
-          <img loading="lazy" src="../img/general/inst4.jpg" alt="Фото работы с инстаграмма">
-        </li>
-        <li class="instagram__item">
-          <img loading="lazy" src="../img/general/inst5.jpg" alt="Фото работы с инстаграмма">
-        </li>
-        <li class="instagram__item">
-          <img loading="lazy" src="../img/general/inst6.jpg" alt="Фото работы с инстаграмма">
-        </li>
-      </ul>
     </div>
   </div>
 </section>
@@ -431,6 +436,9 @@
 							<use href="../img/icons/sprite.svg#icon-header-logo"></use>
 						</svg>
 					</div>
+
+				</div>
+				<address class="footer__contacts">
 					<ul class="footer__social">
 						<li class="footer__social-item">
 							<a href="#" class="footer__social-link">
@@ -454,8 +462,6 @@
 							</a>
 						</li>
 					</ul>
-				</div>
-				<address class="footer__contacts">
 					<ul class="footer__contacts-list">
 						<li class="footer__contacts-item">
 							<a href="tel:+420123456789">
@@ -475,7 +481,7 @@
 						</li>
 						<li class="footer__contacts-item">
 							<a href="#">
-								<span>Šafaříkova 3, 120 00</span>
+								<span>Patočkova 2386/23,Praha 6</span>
 								<svg class="footer__social-icon" height="24" width="24">
 									<use href="../img/icons/sprite.svg#icon-map-icon"></use>
 								</svg>

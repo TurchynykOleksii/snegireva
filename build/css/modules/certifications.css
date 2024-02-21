@@ -34,6 +34,11 @@
     font-size: 35px;
   }
 }
+@media only screen and (min-width: 615px) {
+  .certifications .swiper {
+    overflow: visible;
+  }
+}
 .certifications .swiper-pagination {
   margin-top: 20px;
   display: flex;

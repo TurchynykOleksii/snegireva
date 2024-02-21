@@ -4,26 +4,50 @@
 	background-color: $colorText;
 	padding: 6rem 0;
 
+
 	&__main {
 		margin-bottom: 50px;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		gap: 48px;
+
+		@include minw($mob-custom) {
+			justify-content: space-between;
+			gap: 5px;
+		}
+
+		@include minw($lg-custom) {
+			align-items: center;
+		}
 	}
 
 	&__social {
+		margin-bottom: 30px;
 		display: flex;
-		justify-content: center;
+		justify-content: end;
 		align-items: center;
 		gap: 26px;
 	}
 
 	&__logo {
+		width: 100%;
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		gap: 30px;
 		order: -1;
+
+		@include minw($mob-custom) {
+			margin-left: auto;
+			width: auto;
+			order: 0;
+		}
+
+		@include minw($lg-custom) {
+			margin-left: 0;
+			order: 0;
+		}
 	}
 
 	&__list {
@@ -36,6 +60,14 @@
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
+	}
+
+	&__contacts-list {
+		@include minw($lg-custom) {
+			display: flex;
+			flex-direction: column;
+			align-items: end;
+		}
 	}
 
 	&__item,
@@ -54,12 +86,23 @@
 	&__contacts-item {
 		display: flex;
 		align-items: center;
-		align-self: center;
+		align-self: end;
+
+
 
 		a {
 			display: flex;
 			align-items: center;
 			gap: 16px;
+
+		}
+
+		span {
+			font-size: 14px;
+
+			@include minw($mob-custom) {
+				font-size: 18px;
+			}
 		}
 	}
 
