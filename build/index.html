@@ -5,379 +5,496 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Gulp template</title>
+	<title>Helena Snegireva</title>
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="Shortcut Icon" type="image/x-icon" href="img/general/favicon.svg" />
+	<link rel="Shortcut Icon" type="image/x-icon" href="img/icons/header-logo.svg" />
 
-	<link rel="stylesheet" href="css/modules/example.css"><link rel="stylesheet" href="css/modules/banner.css"><link rel="stylesheet" href="css/modules/video.css"><link rel="stylesheet" href="css/modules/anchor.css"><link rel="stylesheet" href="css/modules/tabs.css"><link rel="stylesheet" href="css/modules/popup.css"><link rel="stylesheet" href="css/modules/slider.css">
+	<link rel="stylesheet" href="css/modules/header.css">
 
 	<link rel="stylesheet" href="css/libs/swiper.css">
 </head>
 
 <body>
 
-<!-- Add autoHide class to automatically hide the header on scroll -->
-<header class="header autoHide">
-	<div class="container">
-		<a href="/" class="header__logo"><img src="img/general/logo.svg" alt="logo"></a>
+	<!-- Add autoHide class to automatically hide the header on scroll -->
+	<header class="header">
+		<div class="wrapper">
+			<div class="header__inner">
+				<a href="#" class="header__logo">
+					<svg class="header__logo_mobile" height="37" width="105">
+						<use href="../img/icons/sprite.svg#icon-header-logo"></use>
+					</svg>
+					<svg class="header__logo_pc" height="53" width="149">
+						<use href="../img/icons/sprite.svg#icon-header-logo"></use>
+					</svg>
+				</a>
+				<div class="header__wrapper">
+					<ul class="header__social">
+						<li class="header__social-item"><a href="#">
+								<svg class="header__social-icon" height="25" width="25">
+									<use href="../img/icons/sprite.svg#icon-inst-icon"></use>
+								</svg>
+							</a></li>
+						<li class="header__social-item"><a href="#">
+								<svg class="header__social-icon" height="25" width="25">
+									<use href="../img/icons/sprite.svg#icon-whats-icon"></use>
+								</svg>
+							</a></li>
+						<li class="header__social-item"><a href="#">
+								<svg class="header__social-icon" height="25" width="25">
+									<use href="../img/icons/sprite.svg#icon-facebook-icon"></use>
+								</svg>
+							</a></li>
+					</ul>
+					<nav class="header__menu">
+						<ul class="header__list">
+							<li>
+								<a href="#">Про меня</a>
+							</li>
+							<li>
+								<a href="#">Услуги</a>
+							</li>
+							<li>
+								<a href="#">Отзывы</a>
+							</li>
+							<li>
+								<a href="#">Сертификаты</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__btns">
+					<a class="header__form-btn">
+						<svg class="header__icon_pen" height="44" width="64">
+							<use href="../img/icons/sprite.svg#icon-pen-icon"></use>
+						</svg>
+						<span class="header__form-text">Записаться</span>
+					</a>
+					<button class="header__burger">
+						<img src="../img/icons/burger-icon.svg" class="header__icon-burger" height="44" width="64"
+							alt="burger icon">
+					</button>
+				</div>
 
-		<div class="header__menu">
-
-			<ul class="header__menu-list">
-				<li class="menu-item"><a href="page.html">page</a></li>
-				<li class="menu-item"><a href="#">Menu 2</a></li>
-				<li class="menu-item"><a href="#">Menu 3</a></li>
-			</ul>
+			</div>
 		</div>
-		
-		<div class="header__burger"></div>
-	</div>
-</header>
+	</header>
 
-<main class="main">
+	<main class="main">
 
-<section class="banner" id="banner">
-	<div class="container flex-2">
-		<div class="banner__wrap">
-			<h1>Стартовая сборка для темы Wordpress</h1>
-		</div>
+<section class="hero">
+  <div class="wrapper">
+    <div class="hero__inner">
+      <div class="hero__helen">
+        <div class="hero__img">
+          <img loading="lazy" src="../img/general/helen-hero.jpg" alt="helen">
+        </div>
+        <div class="hero__info">
+          <h1 class="hero__title">Красота за пределами глаз</h1>
 
-		<div class="banner__img">
-			<img src="img/gulp-white-logo.svg" alt="">
-		</div>
-	</div>
+          <p class="hero__text">
+            Персонализированные процедуры для лица и волос в Праге
+          </p>
+          <button class="hero__btn">записаться</button>
+        </div>
+      </div>
+      <div class="hero__slogan">
+        <div class="hero__slogan-img">
+          <img src="../img/general/hero-second.jpg" alt="helen">
+        </div>
 
-	<div class="banner__bg bg" style="--bg-image: url('../img/cover/bg.png');"><div></div></div>
+        <p class="hero__slogan-text">
+          Доверьте свою красоту профессионалу, который обретет уникальный подход для решения вашей проблемы
+        </p>
+      </div>
+
+    </div>
+  </div>
 </section>
-<div class="anchor">
-	<div class="container">
-		<ul class="anchor__list">
-			<li class="anchor__item"><a href="#example" class="">Доп. классы</a></li>
-			<li class="anchor__item"><a href="#form" class="">CF7 форма</a></li>
-			<li class="anchor__item"><a href="#video" class="">Видео плеер</a></li>
-			<li class="anchor__item"><a href="#tabs">Табы</a></li>
-			<li class="anchor__item"><a href="#popup" class="">Попап окна</a></li>
-			<li class="anchor__item"><a href="#slider" class="">Слайдер</a></li>
-		</ul>
-	</div>
-</div>
-<section class="example" id="example">
-	<div class="container">
-		<h2>Сетка на флексах</h2>
-		<p>Укажите для контейнера универсальный класс .grid-{4,3,2} и все внутренние div примут данное правило</p>
+<section class="familiarity">
+  <div class="wrapper">
+    <div class="familiarity__inner">
+      <h2 class="familiarity__title">давайте знакомиться</h2>
+      <div class="familiarity__right">
+        <div class="familiarity__right_info">
+          <p class="familiarity__right-text">
+            Поздравляю! Меня зовут Елена. Я косметолог с большим опытом, направленным на уникальный подход к лечению
+            кожи
+            и подбору
+            косметики и уходу. Мое призвание – помогать людям заботиться об их коже правильно и максимально эффективно.
+          </p>
 
-		<div class="example__wrap grid-4" data-grid="--p:20">
-			<div class="example__item">
-				<div class="example__item-img">
-					<img src="img/example/example.svg" alt="example-image">
-				</div>
+          <p class="familiarity__right-text familiarity__mob">
+            Также, я специализируюсь на мезотерапии, где каждая процедура – ​​это особый путь к вашей красоте. С помощью
+            высококачественных процедур ухода и уникальной мезотерапии я помогаю восстановить сияющий вид лица и
+            здоровые
+            волосы.
+          </p>
+        </div>
 
-				<div class="example__item-wrap">
-					<h3 class="example__item-title">Title 1</h3>
-					<p class="example__item-descr">Lorem ipsum dolor sit emet</p>
-				</div>
-			</div>
+        <div class="familiarity__img-right">
+          <img loading="lazy" src="../img/general/fam-one.jpg" alt="фото обработки лица">
+        </div>
+        <p class="familiarity__right-mob">
+          Также, я специализируюсь на мезотерапии, где каждая процедура – ​​это особый путь к вашей красоте. С помощью
+          высококачественных процедур ухода и уникальной мезотерапии я помогаю восстановить сияющий вид лица и
+          здоровые
+          волосы.
+        </p>
+      </div>
+      <div class="familiarity__left">
+        <div class="familiarity__img-left">
+          <img loading="lazy" src="../img/general/fam-two.jpg" alt="фото обработки лица">
+        </div>
+        <div class="familiarity__left-text">
+          <p>
+            Я предоставляю профессиональную консультацию по подбору косметических продуктов, анализируя их химический
+            состав и
+            помогаю выбрать идеальный уход для каждого типа кожи. Мой опыт в области косметики позволяет давать
+            индивидуальные
+            рекомендации и находить эффективные решения для каждого клиента.
+          </p>
+          <p>
+            Каждый может иметь кровяную и здоровую кожу, и я готова помочь вам достичь этой цели.
+          </p>
+        </div>
 
-			<div class="example__item">
-				<div class="example__item-img">
-					<img src="img/example/example.svg" alt="example-image">
-				</div>
-
-				<div class="example__item-wrap">
-					<h3 class="example__item-title">Title 2</h3>
-					<p class="example__item-descr">Lorem ipsum dolor sit emet</p>
-				</div>
-			</div>
-
-			<div class="example__item">
-				<div class="example__item-img">
-					<img src="img/example/example.svg" alt="example-image">
-				</div>
-
-				<div class="example__item-wrap">
-					<h3 class="example__item-title">Title 3</h3>
-					<p class="example__item-descr">Lorem ipsum dolor sit emet</p>
-				</div>
-			</div>
-
-			<div class="example__item">
-				<div class="example__item-img">
-					<img src="img/example/example.svg" alt="example-image">
-				</div>
-
-				<div class="example__item-wrap">
-					<h3 class="example__item-title">Title 4</h3>
-					<p class="example__item-descr">Lorem ipsum dolor sit emet</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="example__wrap grid-3">
-			<div class="example__item">
-				<div class="example__item-img">
-					<img src="img/example/example.svg" alt="example-image">
-				</div>
-
-				<div class="example__item-wrap">
-					<h3 class="example__item-title">Title 1</h3>
-					<p class="example__item-descr">Lorem ipsum dolor sit emet</p>
-				</div>
-			</div>
-
-			<div class="example__item">
-				<div class="example__item-img">
-					<img src="img/example/example.svg" alt="example-image">
-				</div>
-
-				<div class="example__item-wrap">
-					<h3 class="example__item-title">Title 2</h3>
-					<p class="example__item-descr">Lorem ipsum dolor sit emet</p>
-				</div>
-			</div>
-
-			<div class="example__item">
-				<div class="example__item-img">
-					<img src="img/example/example.svg" alt="example-image">
-				</div>
-
-				<div class="example__item-wrap">
-					<h3 class="example__item-title">Title 3</h3>
-					<p class="example__item-descr">Lorem ipsum dolor sit emet</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="example__wrap grid-2">
-			<div class="example__item">
-				<div class="example__item-img">
-					<img src="img/example/example.svg" alt="example-image">
-				</div>
-
-				<div class="example__item-wrap">
-					<h3 class="example__item-title">Title 1</h3>
-					<p class="example__item-descr">Lorem ipsum dolor sit emet</p>
-				</div>
-			</div>
-
-			<div class="example__item">
-				<div class="example__item-img">
-					<img src="img/example/example.svg" alt="example-image">
-				</div>
-
-				<div class="example__item-wrap">
-					<h3 class="example__item-title">Title 2</h3>
-					<p class="example__item-descr">Lorem ipsum dolor sit emet</p>
-				</div>
-			</div>
-		</div>
-
-		<h2>Кнопки</h2>
-		<a href="#popup-example" class="bttn">Открыть попап</a>
-		<button class="bttn bttn-border">Button border</button>
-		<button class="bttn bttn-white">Button white</button>
-		<button class="bttn bttn-loading">Loading</button>
-		<button class="bttn" disabled>Disabled</button>
-		<button class="bttn bttn--red">Second</button>
-
-		<button class="bttn bttn--small">Button small</button>
-		<button class="bttn bttn--big">Button big</button>
-
-	</div>
+      </div>
+      <a href="#" class="familiarity__btn btn">Записаться</a>
+    </div>
+  </div>
 </section>
-<section class="form" id="form">
-	<div class="container">
-		<h2 class="form__title">Contact Form 7 - стандартная структура основных полей</h2>
-
-		<div role="form" class="wpcf7" id="wpcf7-f5-o1" lang="uk" dir="ltr">
-			<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-
-			<form action="/#wpcf7-f5-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
-				<div style="display: none;">
-					<input type="hidden" name="_wpcf7" value="5" />
-					<input type="hidden" name="_wpcf7_version" value="5.5.6.1" />
-					<input type="hidden" name="_wpcf7_locale" value="uk" />
-					<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f5-o1" />
-					<input type="hidden" name="_wpcf7_container_post" value="0" />
-					<input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-				</div>
-
-				<label> Ваше ім'я
-					<span class="wpcf7-form-control-wrap your-name">
-						<input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" />
-					</span>
-				</label>
-				
-				<label> Ваш email
-					<span class="wpcf7-form-control-wrap your-email">
-						<input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" />
-					</span>
-				</label>
-				
-				<label> Ваше повідомлення (необов'язково)
-					<span class="wpcf7-form-control-wrap your-message">
-						<textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea>
-					</span>
-				</label>
-				
-				<span class="wpcf7-form-control-wrap menu-780">
-					<select name="menu-780" class="wpcf7-form-control wpcf7-select" aria-invalid="false">
-						<option value="option 1">option 1</option>
-						<option value="option 2">option 2</option>
-						<option value="option 3">option 3</option>
-					</select>
-				</span>
-				
-				<span class="wpcf7-form-control-wrap acceptance-form">
-					<span class="wpcf7-form-control wpcf7-acceptance">
-						<span class="wpcf7-list-item">
-							<label><input type="checkbox" name="acceptance-form" value="1" aria-invalid="false" />
-								<span class="wpcf7-list-item-label">Я погоджуюсь на обробку персональних даних</span>
-							</label>
-						</span>
-					</span>
-				</span>
-				
-				<input type="submit" value="Відправити" class="wpcf7-form-control has-spinner wpcf7-submit bttn" /><p style="display: none !important;"><label>&#916;<textarea name="_wpcf7_ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="_wpcf7_ak_js" value="19"/><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p><div class="wpcf7-response-output" aria-hidden="true"></div>
-			</form>
-		</div>
-	</div>
+<section class="price">
+  <div class="wrapper">
+    <div class="price__inner">
+      <h3 class="price__title">услуги и цены</h3>
+      <ul class="price__list">
+        <li class="price__item">
+          <div class="price__headline">
+            <p>Комбинированная чистка лица "Fresh" + маска + массаж</p>
+            <div class="price__item-icon">
+              <img src="../img/icons/arrow-up.svg" class="price__arrow-icon" height="40" width="40" alt="arrow up">
+            </div>
+          </div>
+          <p class="price__text price__hidden">
+            Комбинированная чистка лица "Fresh" – это сочетание очищения, питательной маски и расслабляющего массажа,
+            которое
+            приводит к обновлению и освежению вашей кожи. Очистка подчеркивается питающей и успокаивающей маской,
+            завершаясь
+            расслабляющим массажем, который делает вашу кожу сияющей и восстановленной.
+          </p>
+        </li>
+        <li class="price__item">
+          <div class="price__headline">
+            <p>"Relax" снятия макияжа + пилинг + маска + массаж</p>
+            <div class="price__item-icon">
+              <img src="../img/icons/arrow-up.svg" class="price__arrow-icon" height="40" width="40" alt="arrow up">
+            </div>
+          </div>
+          <p class="price__text price__hidden">
+            Это сочетание снятия макияжа, пилинга, нанесения маски и массажа, которые обеспечивают вашей коже
+            расслабление,
+            освежение и восстановление. Эта услуга включает удаление макияжа, проведение пилинга, нанесение увлажняющей
+            маски и
+            завершается расслабляющим массажем, подарив вашей коже ощущение умиротворения и восстановления.
+          </p>
+        </li>
+        <li class="price__item">
+          <div class="price__headline">
+            <p>Процедура против усталости и плохого настроения SOS массаж головы + маска</p>
+            <div class="price__item-icon">
+              <img src="../img/icons/arrow-up.svg" class="price__arrow-icon" height="40" width="40" alt="arrow up">
+            </div>
+          </div>
+          <p class="price__text price__hidden">
+            Процедура "SOS" - это специальный массаж головы, сопровождаемый маской, направленный на борьбу с усталостью
+            и плохим
+            настроением. Эта процедура обеспечивает расслабление, улучшение самочувствия и восстановление энергии
+            благодаря массажу
+            головы и ухаживающей маске.
+          </p>
+        </li>
+        <li class="price__item">
+          <div class="price__headline">
+            <p>Микронидоинг (микроигольчатая мезотерапия)</p>
+            <div class="price__item-icon">
+              <img src="../img/icons/arrow-up.svg" class="price__arrow-icon" height="40" width="40" alt="arrow up">
+            </div>
+          </div>
+          <p class="price__text price__hidden">
+            Микронидлинг (микроигольчатая мезотерапия) - это инновационная процедура, которая использует мельчайшие иглы
+            для
+            аккуратного воздействия на кожу лица. Она способствует стимуляции естественного процесса восстановления
+            кожи, улучшает
+            текстуру и тонус кожи, а также снижает видимость морщин, рубцов и пигментации. Эта безопасная и эффективная
+            техника
+            помогает достичь молодого и свежего вида кожи.
+          </p>
+        </li>
+        <li class="price__item">
+          <div class="price__headline">
+            <p>Микронидлинг кожи головы + мезоктейль</p>
+            <div class="price__item-icon">
+              <img src="../img/icons/arrow-up.svg" class="price__arrow-icon" height="40" width="40" alt="arrow up">
+            </div>
+          </div>
+          <p class="price__text price__hidden">Микронидлинг кожи головы с мезококтейлем - это инновационная процедура,
+            которая использует мельчайшие иглы
+            для
+            стимуляции роста волос и укрепления фолликулов. Она помогает улучшить качество кожи головы, стимулирует
+            естественный
+            процесс роста волос и повышает эффективность проникновения активных веществ, способствуя здоровью и красоте
+            волос.</p>
+        </li>
+        <li class="price__item">
+          <div class="price__headline">
+            <p>Супер пилинг и чистка "Anti akne" + маска + легкий массаж</p>
+            <div class="price__item-icon">
+              <img src="../img/icons/arrow-up.svg" class="price__arrow-icon" height="40" width="40" alt="arrow up">
+            </div>
+          </div>
+          <p class="price__text price__hidden">
+            "Anti Akne" - это высокоэффективный супер-пилинг и профессиональная чистка, специально разработанные для
+            борьбы с
+            проблемами кожи, связанными с акне. После процедуры наносится специальная маска, которая улучшает состояние
+            кожи, а
+            легкий массаж дополняет эффект, обеспечивая ощущение расслабления и ухода. Эта комплексная процедура
+            помогает бороться с
+            акне и улучшает общее состояние кожи.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
 </section>
-<section class="video" id="video">
-	<div class="container">
-		<h2 class="video__title">Отложенная загрузка YouTube плеера</h2>
-		<p class="video__descr">Для настройки видео плеера необходимо передать id видео и любое изображение в качестве обложки</p>
+<section class="feetback">
+  <div class="wrapper">
+    <div class="feetback__inner">
+      <h4 class="feetback__title">Отзывы обо мне</h4>
+      <div class="swiper feetback__slider">
+        <div class="slider__slider swiper-wrapper">
+          <div class="slider__feetback swiper-slide">
+            <img src="../img/general/review1.jpg" alt="відкуг">
+          </div>
 
-		<div class="video-frame" data-video-id="BfUpWHTYoJU">
-			<img src='img/video/cover.webp' alt='video_cover'>
-			<div class="iframe"></div>
-		</div>
-	</div>
+          <div class="slider__feetback swiper-slide">
+            <img src="../img/general/review2.jpg" alt="відкуг">
+          </div>
+
+          <div class="slider__feetback swiper-slide">
+            <img src="../img/general/review3.jpg" alt="відкуг">
+          </div>
+
+          <div class="slider__feetback swiper-slide">
+            <img src="../img/general/review4.jpg" alt="відкуг">
+            <img src="../img/general/review5.jpg" alt="відкуг">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <ul class="feetback__list">
+        <li class="feetback__item">
+          <img src="../img/general/review1.jpg" alt="img slider">
+        </li>
+        <li class="feetback__item">
+          <img src="../img/general/review2.jpg" alt="img slider">
+        </li>
+        <li class="feetback__item">
+          <img src="../img/general/review3.jpg" alt="img slider">
+        </li>
+        <li class="feetback__item feetback__last">
+          <img src="../img/general/review5.jpg" alt="img slider">
+          <img src="../img/general/review4.jpg" alt="img slider">
+        </li>
+      </ul>
+    </div>
+  </div>
 </section>
+<section class="certifications">
+  <div class="wrapper">
+    <div class="certifications__inner">
+      <h5 class="certifications__title">Мои сертификаты</h5>
+      <div class="swiper certifications__slider">
+        <div class="slider__slider swiper-wrapper">
+          <div class="slider__certifications swiper-slide">
+            <img src="../img/general/cert1.png" alt="">
+          </div>
 
+          <div class="slider__certifications swiper-slide">
+            <img src="../img/general/cert2.png" alt="">
+          </div>
 
-<section>
-	<div class="container">
-		<div class="tabs-container" id="tabs">
-			<div class="tabs-wrap">
-				<ul class="tabs-switch">
-					<li data-filter="all" class="active">Все категории</li>
-					<li data-filter="1">Категория 1</li>
-					<li data-filter="2">Категория 2</li>
-					<li data-filter="3">Категория 3</li>
-					<li data-filter="4">Категория 4</li>
-					<li data-filter="5">Категория 5</li>
-					<li data-filter="6">Категория 6</li>
-				</ul>
-			</div>
-		
-			<div class="tabs-content">
-				<div class="tabs-item" data-term="1">
-					Category 1
-				</div>
-		
-				<div class=" tabs-item" data-term="2">
-					Category 2
-				</div>
-		
-				<div class="tabs-item" data-term="3">
-					Category 3
-				</div>
-		
-				<div class="tabs-item" data-term="4">
-					Category 4
-				</div>
-		
-				<div class="tabs-item" data-term="5">
-					Category 5
-				</div>
-		
-				<div class="tabs-item" data-term="6">
-					Category 6
-				</div>
-			</div>
-		</div>
-	</div>
+          <div class="slider__certifications swiper-slide">
+            <img src="../img/general/cert3.png" alt="">
+          </div>
+
+          <div class="slider__certifications swiper-slide">
+            <img src="../img/general/cert4.png" alt="">
+          </div>
+          <div class="slider__certifications swiper-slide">
+            <img src="../img/general/cert5.png" alt="">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
 </section>
-<section class="slider" id="slider">
-	<div class="container">
-		<h2 class="slider__title">Swiper слайдер</h2>
+<section class="form">
 
-		<div class="swiper">
-			<h2 class="slider__title">
-				Слайдер в 3 колонки 
-			</h2>
-
-			<div class="swiper-button-prev"><img src="img/icons/slide_prev.svg" alt="prev"></div>
-			<div class="swiper-button-next"><img src="img/icons/slide_next.svg" alt="next"></div>
-
-			<div class="slider__slider swiper-wrapper">
-				<div class="slider__review swiper-slide">
-					<h2>Slide 1</h2>
-				</div>
-
-				<div class="slider__review swiper-slide">
-					<h2>Slide 2</h2>
-				</div>
-
-				<div class="slider__review swiper-slide">
-					<h2>Slide 3</h2>
-				</div>
-
-				<div class="slider__review swiper-slide">
-					<h2>Slide 4</h2>
-				</div>
-			</div>
-		</div>
-
-	</div>
+  <div class="form__inner">
+    <div class="wrapper">
+      <h6 class="form__title">Свяжитесь со мной</h6>
+    </div>
+    <div class="form__text-form">
+      <div class="form__text-wrapper">
+        <div class="wrapper">
+          <p class="form__text">
+            Если у вас есть вопросы, желание запланировать консультацию или записать на процедуру, пожалуйста, заполните
+            эту
+            форму.
+            Я отвечу вам как можно скорее.
+          </p>
+        </div>
+      </div>
+      <div class="form__form-wrapper">
+        <div class="wrapper">
+          <from class="form__request">
+            <label class="form__label">
+              <span>Имя</span>
+              <input type="text" name="username">
+            </label>
+            <label class="form__label">
+              <span>Телефон</span>
+              <input type="text" name="userphone">
+            </label>
+            <label class="form__label form__last-label">
+              <span>Сообщение</span>
+              <input type="text" name="usertext">
+            </label>
+            <input type="submit" value="Отправить" class="btn form__submit">
+          </from>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
+<section class="instagram">
+  <div class="wrapper">
+    <div class="instagram__inner">
+      <h6 class="instagram__title">Мой instagram</h6>
+      <div class="instagram__qr">
+        <img loading="lazy" src="../img/icons/qr-code.svg" width="125" alt="qr код">
+        <p class="instagram__text">
+          Больше полезной информации о косметической продукции и уходе за кожей ищите Вы можете найти на моей странице в
+          instagram. Подписывайтесь!
+        </p>
+      </div>
+      <ul class="instagram__list">
+        <li class="instagram__item">
+          <img loading="lazy" src="../img/general/inst1.jpg" alt="Фото работы с инстаграмма">
+        </li>
+        <li class="instagram__item">
+          <img loading="lazy" src="../img/general/inst2.jpg" alt="Фото работы с инстаграмма">
+        </li>
+        <li class="instagram__item">
+          <img loading="lazy" src="../img/general/inst3.jpg" alt="Фото работы с инстаграмма">
+        </li>
+        <li class="instagram__item">
+          <img loading="lazy" src="../img/general/inst4.jpg" alt="Фото работы с инстаграмма">
+        </li>
+        <li class="instagram__item">
+          <img loading="lazy" src="../img/general/inst5.jpg" alt="Фото работы с инстаграмма">
+        </li>
+        <li class="instagram__item">
+          <img loading="lazy" src="../img/general/inst6.jpg" alt="Фото работы с инстаграмма">
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer class="footer">
-	<div class="container">
-		<p>Footer</p>
+	<div class="wrapper">
+		<div class="footer__inner">
+			<div class="footer__main">
+				<ul class="footer__list">
+					<li class="footer__item"><a href="#" class="footer__item-link">Обо мне</a></li>
+					<li class="footer__item"><a href="#" class="footer__item-link">Услуги и цены</a></li>
+					<li class="footer__item"><a href="#" class="footer__item-link">Отзывы</a></li>
+					<li class="footer__item"><a href="#" class="footer__item-link">Сертификаты</a></li>
+				</ul>
+				<div class="footer__logo">
+					<div class="footer__logo-icon">
+						<svg class="footer__logo_pc" height="53" width="149">
+							<use href="../img/icons/sprite.svg#icon-header-logo"></use>
+						</svg>
+					</div>
+					<ul class="footer__social">
+						<li class="footer__social-item">
+							<a href="#" class="footer__social-link">
+								<svg class="footer__social-icon" height="25" width="25">
+									<use href="../img/icons/sprite.svg#icon-inst-icon"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="footer__social-item">
+							<a href="#" class="footer__social-link">
+								<svg class="footer__social-icon" height="25" width="25">
+									<use href="../img/icons/sprite.svg#icon-whats-icon"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="footer__social-item">
+							<a href="#" class="footer__social-link">
+								<svg class="footer__social-icon" height="25" width="25">
+									<use href="../img/icons/sprite.svg#icon-facebook-icon"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<address class="footer__contacts">
+					<ul class="footer__contacts-list">
+						<li class="footer__contacts-item">
+							<a href="tel:+420123456789">
+								<span>+420 123 456 789</span>
+								<svg class="footer__social-icon" height="24" width="24">
+									<use href="../img/icons/sprite.svg#icon-phone-icon"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="footer__contacts-item">
+							<a href="mailto:okolojcfkdd@gmail.com">
+								<span>okolojcfkdd@gmail.com</span>
+								<svg class="footer__social-icon" height="24" width="24">
+									<use href="../img/icons/sprite.svg#icon-mail-icon"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="footer__contacts-item">
+							<a href="#">
+								<span>Šafaříkova 3, 120 00</span>
+								<svg class="footer__social-icon" height="24" width="24">
+									<use href="../img/icons/sprite.svg#icon-map-icon"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</address>
+			</div>
+			<p class="footer__copyright">
+				© 2023 Косметологічний кабінет у Празі. Всі права захищені.
+			</p>
+		</div>
 	</div>
 </footer>
 
-<script src="js/libs/jquery-3.6.0.min.js"></script>
-<div class="popup-bg">
-	<div class="popup" id="popup-example">
-		<div class="popup__close">
-			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15.996" viewBox="0 0 16 15.996">
-				<path id="Icon_ionic-ios-close" data-name="Icon ionic-ios-close" d="M21.181,19.287,26.9,13.572A1.339,1.339,0,1,0,25,11.678l-5.715,5.715-5.715-5.715a1.339,1.339,0,1,0-1.894,1.894l5.715,5.715L11.679,25a1.339,1.339,0,0,0,1.894,1.894l5.715-5.715L25,26.895A1.339,1.339,0,0,0,26.9,25Z" transform="translate(-11.285 -11.289)"/>
-			</svg>
-		</div>
-
-		<div class="popup__wrap">
-			<h2 class="popup__title">Заголовок попап окна</h2>
-			<div class="popup__descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita est doloremque temporibus dolorem adipisci, quibusdam in ipsum officia qui perferendis, rem quas? Reprehenderit labore facere ab quo exercitationem soluta maiores.</div>
-
-			<button class="popup__bttn bttn popup__bttn-close">Закрыть</button>
-		</div>
-	</div>
-
-	<div class="popup popup--thanks" id="popup-thanks">
-		<div class="popup__close">
-			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15.996" viewBox="0 0 16 15.996">
-				<path id="Icon_ionic-ios-close" data-name="Icon ionic-ios-close" d="M21.181,19.287,26.9,13.572A1.339,1.339,0,1,0,25,11.678l-5.715,5.715-5.715-5.715a1.339,1.339,0,1,0-1.894,1.894l5.715,5.715L11.679,25a1.339,1.339,0,0,0,1.894,1.894l5.715-5.715L25,26.895A1.339,1.339,0,0,0,26.9,25Z" transform="translate(-11.285 -11.289)"/>
-			</svg>
-		</div>
-
-		<div class="popup__wrap">
-			<h2 class="popup__title">Успешная отправка формы</h2>
-			<div class="popup__descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita est doloremque temporibus dolorem adipisci, quibusdam in ipsum officia qui perferendis, rem quas? Reprehenderit labore facere ab quo exercitationem soluta maiores.</div>
-
-			<button class="popup__bttn bttn popup__bttn-close">Закрыть</button>
-		</div>
-	</div>
-</div>
-
 <script src="js/libs/swiper-bundle.min.js"></script>
 <script src="js/app.js" type="module"></script>
-<script src="js/modules/video.js"></script>
-<script src="js/modules/anchor.js"></script>
 <script src="js/modules/slider.js"></script>
 
 </body>
+
 </html>

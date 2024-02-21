@@ -10,22 +10,37 @@
   // Set global fonts here
 }
 
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 * {
   position: relative;
 }
 
 html {
   font-size: 10px;
-  background-color: $bgColor;
+  background-color: $bgAccent;
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: Golos, sans-serif;
-
+  font-family: SfProRounded, sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  color: $colorText;
 
   &.menu-open {
     overflow: hidden;
@@ -41,12 +56,10 @@ body {
 section {
   overflow: hidden;
   z-index: 1;
-  padding: 6rem 0;
 }
 
 main {
   flex: 1;
-  margin-top: 6rem;
 
   @include minw($sm-pc) {
     margin-top: 0;
@@ -208,11 +221,12 @@ main {
     width: 100%;
     height: 100%;
     z-index: 1;
-    background: rgba(0,0,0, .4);
+    background: rgba(0, 0, 0, .4);
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%);
   }
 
   &-top {
+
     &:before,
     &:after {
       background-position: top center;
@@ -220,6 +234,7 @@ main {
   }
 
   &-bottom {
+
     &:before,
     &:after {
       background-position: bottom center;
@@ -231,9 +246,25 @@ main {
   .flex-2 {
     display: flex;
     align-items: center;
-  
-    & > div {
+
+    &>div {
       flex: 1;
     }
+  }
+}
+
+.wrapper {
+  padding: 0 5px;
+  margin: 0 auto;
+  max-width: 375px;
+  width: 100%;
+
+  @include minw($mob-custom) {
+    max-width: $mob-custom;
+  }
+
+  @include minw($lg-custom) {
+    max-width: $lg-custom;
+    padding: 0 10px;
   }
 }

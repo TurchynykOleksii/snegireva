@@ -1,13 +1,12 @@
 //===========================
 // Основные цвета
 //===========================
-$bgColor: #fff;
-$bttnColor: rgb(72 74 89);
-$bttnSecondColor: rgb(210, 59, 59);
-$mainColor: #000;
 
-$red: #b5143b;
-$black: #191919;
+$bgAccent: #E4E1FF;
+$bgRouseColor: #D2C3EB;
+$btnBgColor: #CFC2F2;
+$lightTextColor: #FAFAFA;
+$colorText: #492D7A;
 
 
 //===========================
@@ -28,9 +27,11 @@ $gridMinSize: 450; // Минимальная ширина для 2 колоно�
 $uhd: 2160px;
 $fhd: 1900px;
 $lg: 1400px;
+$lg-custom: 1200px;
 $pc: $containerWidth+px;
 $sm-pc: 992px;
 $tablet: 768px;
+$mob-custom: 615px;
 $mob: 576px;
 $i5: 320px;
 

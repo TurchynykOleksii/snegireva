@@ -1,0 +1,114 @@
+@import "../core";
+
+.feetback {
+  padding-top: 20px;
+  padding-bottom: 82px;
+
+  @include minw($mob-custom) {
+    padding-top: 40px;
+    padding-bottom: 64px;
+  }
+
+  @include minw($lg-custom) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-family: Alice, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+
+    @include minw($mob-custom) {
+      margin-bottom: 24px;
+      font-size: 32px;
+    }
+
+    @include minw($lg-custom) {
+      margin-bottom: 60px;
+      font-size: 35px;
+    }
+  }
+
+  &__feetback {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__slider {
+    @include minw($mob-custom) {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: none;
+
+    @include minw($mob-custom) {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    max-width: 292px;
+    width: 100%;
+
+    @include minw($lg-custom) {
+      max-width: 380px;
+    }
+  }
+
+  &__last {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+
+    @include minw($lg-custom) {
+      max-width: 780px;
+      flex-direction: row;
+    }
+
+    img {
+      width: 292px;
+      height: 126px;
+
+      @include minw($lg-custom) {
+        width: 379px;
+        height: 197px;
+      }
+    }
+
+  }
+
+  .swiper-pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+  }
+
+  .swiper-pagination-bullet {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $colorText;
+    transition: width 150ms ease;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 30px;
+    border-radius: 10px;
+  }
+}

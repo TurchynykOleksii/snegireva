@@ -1,0 +1,33 @@
+.instagram {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-image: url("../../img/cover/bg-inst.jpg");
+  background-position: bottom right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #FAFAFA;
+}
+.instagram__title {
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.instagram__qr {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 16px;
+}
+.instagram__text {
+  font-size: 14px;
+}
+.instagram__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style-type: none;
+}
+.instagram__item {
+  max-width: 95px;
+}

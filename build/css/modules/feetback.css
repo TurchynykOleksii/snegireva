@@ -1,0 +1,109 @@
+.feetback {
+  padding-top: 20px;
+  padding-bottom: 82px;
+}
+@media only screen and (min-width: 615px) {
+  .feetback {
+    padding-top: 40px;
+    padding-bottom: 64px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .feetback {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+.feetback__title {
+  margin-bottom: 20px;
+  font-family: Alice, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+@media only screen and (min-width: 615px) {
+  .feetback__title {
+    margin-bottom: 24px;
+    font-size: 32px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .feetback__title {
+    margin-bottom: 60px;
+    font-size: 35px;
+  }
+}
+.feetback__feetback {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (min-width: 615px) {
+  .feetback__slider {
+    display: none;
+  }
+}
+.feetback__list {
+  display: none;
+}
+@media only screen and (min-width: 615px) {
+  .feetback__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+.feetback__item {
+  max-width: 292px;
+  width: 100%;
+}
+@media only screen and (min-width: 1200px) {
+  .feetback__item {
+    max-width: 380px;
+  }
+}
+.feetback__last {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media only screen and (min-width: 1200px) {
+  .feetback__last {
+    max-width: 780px;
+    flex-direction: row;
+  }
+}
+.feetback__last img {
+  width: 292px;
+  height: 126px;
+}
+@media only screen and (min-width: 1200px) {
+  .feetback__last img {
+    width: 379px;
+    height: 197px;
+  }
+}
+.feetback .swiper-pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+}
+.feetback .swiper-pagination-bullet {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #492D7A;
+  transition: width 150ms ease;
+}
+.feetback .swiper-pagination-bullet-active {
+  width: 30px;
+  border-radius: 10px;
+}

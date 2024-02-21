@@ -7,16 +7,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>@@title</title>
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="Shortcut Icon" type="image/x-icon" href="img/general/favicon.svg" />
+	<link rel="Shortcut Icon" type="image/x-icon" href="img/icons/header-logo.svg" />
 
 	@@loop('_css.html',[
-		{"name": "example"},
-		{"name": "banner"},
-		{"name": "video"},
-		{"name": "anchor"},
-		{"name": "tabs"},
-		{"name": "popup"},
-		{"name": "slider"},
+
+	{"name": "header"},
 	])
 
 	<link rel="stylesheet" href="css/libs/swiper.css">
@@ -24,22 +19,68 @@
 
 <body>
 
-<!-- Add autoHide class to automatically hide the header on scroll -->
-<header class="header autoHide">
-	<div class="container">
-		<a href="/" class="header__logo"><img src="img/general/logo.svg" alt="logo"></a>
+	<!-- Add autoHide class to automatically hide the header on scroll -->
+	<header class="header">
+		<div class="wrapper">
+			<div class="header__inner">
+				<a href="#" class="header__logo">
+					<svg class="header__logo_mobile" height="37" width="105">
+						<use href="../img/icons/sprite.svg#icon-header-logo"></use>
+					</svg>
+					<svg class="header__logo_pc" height="53" width="149">
+						<use href="../img/icons/sprite.svg#icon-header-logo"></use>
+					</svg>
+				</a>
+				<div class="header__wrapper">
+					<ul class="header__social">
+						<li class="header__social-item"><a href="#">
+								<svg class="header__social-icon" height="25" width="25">
+									<use href="../img/icons/sprite.svg#icon-inst-icon"></use>
+								</svg>
+							</a></li>
+						<li class="header__social-item"><a href="#">
+								<svg class="header__social-icon" height="25" width="25">
+									<use href="../img/icons/sprite.svg#icon-whats-icon"></use>
+								</svg>
+							</a></li>
+						<li class="header__social-item"><a href="#">
+								<svg class="header__social-icon" height="25" width="25">
+									<use href="../img/icons/sprite.svg#icon-facebook-icon"></use>
+								</svg>
+							</a></li>
+					</ul>
+					<nav class="header__menu">
+						<ul class="header__list">
+							<li>
+								<a href="#">Про меня</a>
+							</li>
+							<li>
+								<a href="#">Услуги</a>
+							</li>
+							<li>
+								<a href="#">Отзывы</a>
+							</li>
+							<li>
+								<a href="#">Сертификаты</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__btns">
+					<a class="header__form-btn">
+						<svg class="header__icon_pen" height="44" width="64">
+							<use href="../img/icons/sprite.svg#icon-pen-icon"></use>
+						</svg>
+						<span class="header__form-text">Записаться</span>
+					</a>
+					<button class="header__burger">
+						<img src="../img/icons/burger-icon.svg" class="header__icon-burger" height="44" width="64"
+							alt="burger icon">
+					</button>
+				</div>
 
-		<div class="header__menu">
-
-			<ul class="header__menu-list">
-				<li class="menu-item"><a href="page.html">page</a></li>
-				<li class="menu-item"><a href="#">Menu 2</a></li>
-				<li class="menu-item"><a href="#">Menu 3</a></li>
-			</ul>
+			</div>
 		</div>
-		
-		<div class="header__burger"></div>
-	</div>
-</header>
+	</header>
 
-<main class="main">
+	<main class="main">

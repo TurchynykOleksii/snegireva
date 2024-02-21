@@ -1,0 +1,40 @@
+@import "../core";
+
+.instagram {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-image: url('../../img/cover/bg-inst.jpg');
+  background-position: bottom right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $lightTextColor;
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__qr {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 16px;
+  }
+
+  &__text {
+    font-size: 14px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style-type: none;
+  }
+
+  &__item {
+    max-width: 95px;
+  }
+}

@@ -1,0 +1,57 @@
+@import "../core";
+
+.certifications {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: $bgRouseColor;
+
+  @include minw($mob-custom) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @include minw($lg-custom) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-family: Alice, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include minw($mob-custom) {
+      margin-bottom: 24px;
+      font-size: 32px;
+    }
+
+    @include minw($lg-custom) {
+      margin-bottom: 60px;
+      font-size: 35px;
+    }
+  }
+
+  .swiper-pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+  }
+
+  .swiper-pagination-bullet {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $colorText;
+    transition: width 150ms ease;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 30px;
+    border-radius: 10px;
+  }
+}
