@@ -282,8 +282,12 @@
 
 # 9. Прочее
 	# Страница опций ACF PRO
-	// if (function_exists('acf_add_options_page')) acf_add_options_page();
+	if (function_exists('acf_add_options_page')) acf_add_options_page();
+add_filter('wpcf7_form_elements', function($content) {
+	$content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
 
+	return $content;
+});
 
 	# ACF Map activation
 	// function my_acf_init() {

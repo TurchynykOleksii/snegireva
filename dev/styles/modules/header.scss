@@ -3,6 +3,7 @@
 .header {
 	padding: 21px 0;
 	background-color: $colorText;
+	z-index: 4;
 
 	&__inner {
 		display: flex;
