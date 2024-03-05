@@ -87,7 +87,7 @@
               d="M21 2.06219V0L21.5205 0.420619C21.6676 0.539566 25.1642 3.37988 28.7171 7.4904C33.5498 13.0818 36 18.094 36 22.3876C36 23.284 35.9664 24.1811 35.8771 25.0736C35.8 25.8442 35.6809 26.6118 35.4989 27.366C35.3376 28.0342 35.1262 28.6916 34.851 29.3245C34.6647 29.7532 34.4637 30.1689 34.2076 30.5629C33.9691 30.9298 33.7045 31.2809 33.4167 31.613C32.8042 32.3198 32.0847 32.888 31.3312 33.4465C30.9448 33.733 30.5453 34.029 30.1791 34.3404C26.0122 37.8821 23.6801 42.2755 23.3915 47.0989L21.7352 49L21.7376 48.077C21.7515 42.4059 24.2996 37.2487 29.1066 33.1629C29.5137 32.8167 29.9354 32.5043 30.3431 32.202C30.7072 31.9321 31.0722 31.6625 31.4186 31.3712C31.5874 31.2291 31.7519 31.0819 31.9082 30.927C31.9855 30.8506 32.0608 30.7721 32.1337 30.6918C32.3895 30.4095 32.6156 30.1027 32.8177 29.7825C33.0244 29.4551 33.178 29.1136 33.3331 28.7615C34.0481 27.1392 34.3764 25.1008 34.3764 22.3878C34.3767 14.0272 23.5279 4.23081 21 2.06219Z"
               fill="#FAFAFA" />
           </svg>
-          <svg class="header__logo_pc" width="149" height="53" viewBox="0 0 149 53" fill="none"
+          <svg class="header__logo_pc" width="140" height="53" viewBox="0 0 149 53" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M59 28.0186C59 27.7424 59.3004 27.5186 59.671 27.5186H148.329C148.7 27.5186 149 27.7424 149 28.0186C149 28.2947 148.7 28.5186 148.329 28.5186H59.671C59.3004 28.5186 59 28.2947 59 28.0186Z"
@@ -229,6 +229,20 @@
           </nav>
         </div>
         <div class="header__btns">
+          <div class="header__lang-switcher">
+            <?php $arr_lang = $langs_array = pll_the_languages( array( 'dropdown' => 1, 'raw' => 1 ) );?>
+            <ul class="language-select-mob">
+              <?php if($arr_lang):?>
+              <?php foreach($arr_lang as $lang ):?>
+              <li <?php echo $lang['current_lang'] == '1' ? 'class="active"' : ''?>
+                data-lang="<?php echo $lang['name']?>">
+                <a href="<?php echo $lang['url']?>"><?php echo $lang['name']?></a>
+              </li>
+              <?php endforeach; ?>
+              <?php endif; ?>
+            </ul>
+          </div>
+
           <a class="header__form-btn" href="#form">
             <svg class="header__icon_pen" width="64" height="44" viewBox="0 0 64 44" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -238,7 +252,7 @@
                 fill="#FAFAFA" />
             </svg>
 
-            <span class="header__form-text">Записаться</span>
+            <span class="header__form-text"><?php the_field('signed')?></span>
           </a>
           <button class="header__burger">
             <img loading="lazy" src="<?=get_template_directory_uri(); ?>/assets/img/icons/burger-icon.svg"

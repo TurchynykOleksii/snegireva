@@ -20,7 +20,7 @@
           <p class="hero__text">
             <?php the_field('hero_subtext')?>
           </p>
-          <a href="#form" class="hero__btn btn">записаться</a>
+          <a href="#form" class="hero__btn btn"><?php the_field('signed')?></a>
         </div>
       </div>
       <div class="hero__slogan">
@@ -87,7 +87,7 @@
         </div>
 
       </div>
-      <a href="#form" class="familiarity__btn btn">Записаться</a>
+      <a href="#form" class="familiarity__btn btn"><?php the_field('signed')?></a>
     </div>
   </div>
 </section>
@@ -230,7 +230,8 @@
             </p>
           </div>
           <div class="form__form-wrapper">
-            <?php echo do_shortcode('[contact-form-7 id="9c3cec6" html_class="form__request" title="Свяжитесь со мной"]')?>
+            <?php echo get_field('form_shortcode')?>
+
           </div>
         </div>
       </div>

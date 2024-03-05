@@ -397,9 +397,12 @@ form label {
 }
 
 .header {
+  position: fixed;
+  width: 100%;
   padding: 21px 0;
   background-color: #492d7a;
-  z-index: 4
+  z-index: 4;
+
 }
 
 .header__inner {
@@ -482,6 +485,7 @@ form label {
 }
 
 .hero {
+  padding-top: 106px;
   padding-bottom: 20px
 }
 
@@ -846,6 +850,91 @@ form label {
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: #d2c3eb
+}
+
+
+
+.header__lang-switcher {
+  position: relative;
+  display: none;
+  width: 62px;
+  height: 40px;
+}
+
+.header__lang-mobile {
+  display: flex;
+  justify-content: end;
+}
+
+.language-select,
+.language-select-mob {
+  display: inline-flex;
+  flex-direction: column;
+  color: #fff;
+  text-transform: uppercase;
+  height: 40px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #492d7a;
+}
+
+.language-select li,
+.language-select-mob li {
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: inherit;
+  order: 2;
+  padding: 10px 20px;
+  min-height: 40px;
+}
+
+
+.language-select li:not(.active),
+.language-select-mob li:not(.active) {
+  border-bottom: 1px solid #d2c3eb;
+}
+
+.language-select-mob li a {
+  color: white;
+}
+
+.language-select li:hover,
+.language-select-mob li:hover {
+  cursor: pointer;
+  background: rgba(228, 225, 255, 0.25);
+}
+
+.language-select.open,
+.language-select-mob.open {
+  height: auto;
+}
+
+
+.language-select li.active,
+.language-select-mob li.active {
+  order: 1;
+  pointer-events: none;
+}
+
+
+#lang_choice_1 {
+  background: transparent;
+  border: none;
+  color: white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+}
+
+.language-select li a {
+  color: white;
+}
+
+.header__lang-switcher a {
+  color: white;
 }
 
 .certifications__title {
@@ -1390,6 +1479,7 @@ form label {
   }
 
   .hero {
+    padding-top: 92px;
     padding-bottom: 40px
   }
 
@@ -1748,6 +1838,18 @@ form label {
   .footer__list {
     max-width: 255px;
     width: 100%;
+  }
+
+  .hero {
+    padding-top: 0;
+  }
+
+  .header {
+    position: static;
+  }
+
+  .header__lang-switcher {
+    display: block;
   }
 
   .price__text {

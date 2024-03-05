@@ -49,3 +49,23 @@ form.addEventListener("wpcf7submit", () => {
     formOut.innerHTML = "";
   }, 3000);
 });
+
+const currentLangMobEl = document.querySelector(".language-select-mob");
+
+$(".language-select").click(function () {
+  $(this).toggleClass("open");
+});
+
+$(".language-select li").click(function () {
+  $(".language-select").data("location", dataLangSelect);
+  $(".language-select li").removeClass("active");
+  $(this).toggleClass("active");
+});
+$(".language-select-mob").click(function () {
+  $(this).toggleClass("open");
+});
+
+$(".language-select-mob li").click(function (e) {
+  $(".language-select-mob li").removeClass("active");
+  $(this).toggleClass("active");
+});

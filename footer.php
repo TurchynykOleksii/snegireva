@@ -155,7 +155,8 @@
          </address>
        </div>
        <p class="footer__copyright">
-         © 2023 Косметологічний кабінет у Празі. Всі права захищені.
+         <?php the_field('copyr')?>
+
        </p>
      </div>
    </div>
@@ -185,6 +186,18 @@
             'walker' => '',
             'theme-location' => 'header_menu'
           )) ?>
+   <div class="header__lang-mobile">
+     <?php $arr_lang = $langs_array = pll_the_languages( array( 'dropdown' => 1, 'raw' => 1 ) );?>
+     <ul class="language-select-mob">
+       <?php if($arr_lang):?>
+       <?php foreach($arr_lang as $lang ):?>
+       <li <?php echo $lang['current_lang'] == '1' ? 'class="active"' : ''?> data-lang="<?php echo $lang['name']?>">
+         <a href="<?php echo $lang['url']?>"><?php echo $lang['name']?></a>
+       </li>
+       <?php endforeach; ?>
+       <?php endif; ?>
+     </ul>
+   </div>
  </div>
 
  <?php wp_footer(); ?>
